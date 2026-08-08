@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 37 99 235;
+    --color-secondary: 15 23 42;
+    --color-accent: 255 140 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  html,
+  body {
+    overflow-x: clip;
+  }
+  @supports not (overflow-x: clip) {
+    html,
+    body {
+      overflow-x: hidden;
+    }
+  }
+  body {
+    @apply font-sans text-gray-500 bg-white antialiased;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-glass;
+  }
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-blue-50/50 shadow-card rounded-2xl;
+  }
+  .btn-primary {
+    @apply bg-primary text-white font-medium px-6 py-3 rounded-xl hover:bg-royal transition-all duration-300 shadow-glow hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply border-2 border-white/30 text-white font-medium px-6 py-3 rounded-xl hover:bg-white/10 transition-all duration-300;
+  }
+  .btn-outline-dark {
+    @apply border-2 border-gray-200 text-navy font-medium px-6 py-3 rounded-xl hover:border-primary hover:text-primary transition-all duration-300;
+  }
+  .section-title {
+    @apply text-4xl md:text-5xl font-heading font-bold text-navy text-center;
+  }
+  .section-subtitle {
+    @apply text-lg text-gray-500 text-center mt-4 max-w-2xl mx-auto;
+  }
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-blue {
+    background: linear-gradient(135deg, #e8f0fe 0%, #ffffff 50%, #dbeafe 100%);
+  }
+  .bg-gradient-hero {
+    background: radial-gradient(ellipse at 50% 0%, rgba(0, 94, 253, 0.08) 0%, transparent 60%),
+                linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-sky;
+  }
+}

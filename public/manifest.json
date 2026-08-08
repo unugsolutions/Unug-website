@@ -1,0 +1,23 @@
+{
+  "name": "UNUG Solutions",
+  "short_name": "UNUG",
+  "description": "UNUG Solutions — Engineering Digital Solutions. Modern websites, custom software, mobile apps, and digital platforms.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0B1E3D",
+  "icons": [
+    {
+      "src": "/mainlogo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

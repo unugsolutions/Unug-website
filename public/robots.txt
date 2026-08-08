@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /login
+Disallow: /offline
+Disallow: /500
+
+Sitemap: https://unugsolutions.online/sitemap.xml
